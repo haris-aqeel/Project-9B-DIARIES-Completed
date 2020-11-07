@@ -8,7 +8,7 @@ const Login = lazy(() => import("../Auth/Login"));
 const SignUp = lazy(() => import("../Auth/SignUp"));
 const Home = lazy(() => import("../Home/Home"));
 const Entries = lazy(() => import("../Entries/Entries"));
-const Page404 = lazy(() => import("../Error/Error"));
+// const Page404 = lazy(() => import("../Error/Error"));
 
 const App: FC = () => {
   const isLoggedIn = useSelector(
