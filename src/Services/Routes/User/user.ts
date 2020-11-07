@@ -14,7 +14,6 @@ export interface AuthResponse {
 
 export const login = (schema: any, req: Request): AuthResponse |  Response => {
   
-
     const {username, password} = JSON.parse(req.requestBody);
 
     const users = schema.users.findBy({username});

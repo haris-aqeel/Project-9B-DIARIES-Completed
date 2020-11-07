@@ -1,5 +1,5 @@
 import React, { FC, lazy, Suspense } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
 import rootReducer from "../../Store/rootReducer";
 import Simpleloader from "../HelpfulComp/Loader_1";
@@ -14,9 +14,12 @@ const App: FC = () => {
   const isLoggedIn = useSelector(
     (state: ReturnType<typeof rootReducer>) => state.auth.isAuthenticated
   );
+
+  console.log(isLoggedIn)
   return (
     <div>
       <Router>
+        <Switch>
         <Suspense fallback={<Simpleloader />}>
           {isLoggedIn ? (
             <>
@@ -39,9 +42,10 @@ const App: FC = () => {
           )}
 
           <Route path="/*">
-            <Page404 />
+          {/* <Page404 /> */}
           </Route>
         </Suspense>
+        </Switch>
       </Router>
     </div>
   );
