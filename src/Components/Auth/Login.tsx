@@ -147,8 +147,8 @@ export default function SignInSide() {
             </Button>
             <Grid container>
               <Grid item>
-                <Link to='/signup' >
-                  {"Don't have an account? Sign Up"}
+                <Link to="/signup" >
+                  Don't have an account? Sign Up
                 </Link>
               </Grid>
             </Grid>
