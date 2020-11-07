@@ -1,6 +1,5 @@
 import {Server, Model, Factory ,hasMany, belongsTo, Response} from 'miragejs';
 
-import {addEntry, create, getDiaries, getEntries, updateDiary, updateEntry} from '../Routes/Diary/diary'
 
 import {login, signup} from '../Routes/User/user' 
 
@@ -33,7 +32,7 @@ export const setupServer = (env? : string): Server => {
 
             }),
 
-            dairy: Model.extend({
+            diary: Model.extend({
 
                 user: belongsTo(),
                 entry: hasMany()
