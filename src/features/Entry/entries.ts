@@ -15,7 +15,7 @@ const entries = createSlice({
            
            const indexOfEntry = state.findIndex((entry) => entry.id === id);
 
-           indexOfEntry !== -1 ? state.splice(indexOfEntry, 1, payload): null
+           indexOfEntry !== -1 ? state.splice(indexOfEntry, 1, payload): console.log("Not Found")
 
 
         }
